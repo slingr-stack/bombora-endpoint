@@ -1,0 +1,64 @@
+{
+    "label": "Bombora Endpoint",
+    "name": "bombora",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": false
+    },
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [
+        {
+            "label": "response",
+            "name" : "res",
+            "description": "async res"
+        }
+    ],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "_get"
+        },
+        {
+            "label": "POST",
+            "name": "_post"
+        },
+        {
+            "label": "getAsync",
+            "name": "_getAsync",
+            "callbacks": [
+                {
+                    "name": "res",
+                    "maxWaitingTime": 120000,
+                    "maxExpectedResponses": 1
+                }
+            ]
+        },
+        {
+            "label": "uploadFile",
+            "name": "_uploadFile"
+        }
+    ],
+    "scripts":[
+        "utils.js"
+    ],
+    "configuration":[
+        {
+            "name": "apiKey",
+            "label": "API Key",
+            "description": "API key provided by bombora",
+            "type": "text",
+            "required": true
+        }
+    ]
+}
