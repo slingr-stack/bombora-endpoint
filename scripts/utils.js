@@ -1,6 +1,6 @@
 
 ///////////////////////////////////
-// Company Surge API
+// Company Surge API    //////////
 //////////////////////////////////
 endpoint.getMetaData = function() {
     return endpoint._get({path:'/v2/Surge/GetMetaData'});
@@ -60,6 +60,7 @@ endpoint.createCompanySurgeReport = function(body) {
         body: body
     });
 };
+
 endpoint.estimatorEndpoint = function(body) {
     return endpoint._post({
         path: '/v4/Surge/Estimate',
@@ -67,6 +68,7 @@ endpoint.estimatorEndpoint = function(body) {
         body: body
     });
 };
+
 endpoint.getListOfCompanySurgeReports = function() {
     return endpoint._get({path:'/v4/Surge/GetList'});
 };
@@ -80,7 +82,7 @@ endpoint.deleteCompanySurgeReports = function(ids) {
 };
 
 ///////////////////////////////////
-// Topic Taxonomy
+// Topic Taxonomy   ///////////////
 ///////////////////////////////////
 
 endpoint.getCategoriesByTheme = function(themeId) {
@@ -130,9 +132,11 @@ endpoint.getTopicByNameOrId = function (nameOrId) {
             return endpoint._get({path:'/v2/Topic/GetTopic?name='+encodeURIComponent(nameOrId)});
        }
 };
+
 endpoint.getTopicsByCategory = function(categoryId) {
     return endpoint._get({path:'/v2/Topic/TopicsByCategory?cat_id='+categoryId});
 };
+
 endpoint.getTopicsCreatedAfterDate = function(date,data,callback) {
     return endpoint._getAsync({path:'/v2/Topic/TopicsAfterDate?date='+date},data,callback);
 };

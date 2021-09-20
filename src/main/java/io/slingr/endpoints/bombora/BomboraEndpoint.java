@@ -25,7 +25,7 @@ import java.util.Date;
 /**
  * <p>Sample endpoint
  *
- * <p>Created by lefunes on 01/12/16.
+ * <p>Created by jGuardiola 20/09/21
  */
 @SlingrEndpoint(name = "bombora")
 public class BomboraEndpoint extends HttpEndpoint {
