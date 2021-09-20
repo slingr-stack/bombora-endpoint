@@ -7,7 +7,7 @@ The Bombora endpoint has access to the whole REST API of bombora.com:
     - Company Surge API        
     - Topic Taxonomy API
 
-For more information please refer to [docs](https://slingr-stack.github.io/platform/endpoints_bombora.html).
+For more information please refer to [docs](https://github.com/slingr-stack/platform-docs/blob/master/pages/extensions/endpoints_bombora.md).
 
 ## About SLINGR
 
