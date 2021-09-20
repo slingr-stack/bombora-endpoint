@@ -108,7 +108,6 @@ public class BomboraEndpoint extends HttpEndpoint {
         headers.set("Authorization", "Basic " + apiKey);
         headers.set("Referer", "bombora.com ");
 
-     //   headers.set("Content-Type", "application/json");
         if (headers.isEmpty("Accept")) {
             headers.set("Accept", "application/json");
         }
